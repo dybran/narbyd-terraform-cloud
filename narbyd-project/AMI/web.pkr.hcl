@@ -20,7 +20,7 @@ source "amazon-ebs" "narbyd-web" {
       virtualization-type = "hvm"
     }
     most_recent = true
-    owners      = ["939895954199"]
+    owners      = ["309956199498"]
   }
   ssh_username = "ec2-user"
   tag {
@@ -32,7 +32,7 @@ source "amazon-ebs" "narbyd-web" {
 
 # a build block invokes sources and runs provisioning steps on them.
 build {
-  sources = ["source.amazon-ebs.terraform-web-prj-19"]
+  sources = ["source.amazon-ebs.narbyd-web"]
 
   provisioner "shell" {
     script = "web.sh"
