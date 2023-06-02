@@ -28,7 +28,7 @@ keypair = "dybran-ec2"
 
 master-password = "Sa4la2xa###"
 
-master-username = "narbyd"
+master-username = "narbyddb"
 
 account_no = "939895954199"
 
