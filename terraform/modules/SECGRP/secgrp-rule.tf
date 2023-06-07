@@ -55,7 +55,7 @@ resource "aws_security_group_rule" "inbound-port-sonarqube" {
   security_group_id = aws_security_group.narbyd["ext-alb-sg"].id
 }
 
-# security group rule for bastion to allow arssh access fro your local machine
+# security group rule for bastion to allow ssh access from your local machine
 resource "aws_security_group_rule" "inbound-ssh-bastion" {
   from_port         = 22
   protocol          = "tcp"
@@ -66,7 +66,7 @@ resource "aws_security_group_rule" "inbound-ssh-bastion" {
 }
 
 
-# security group for nginx reverse proxy, to allow access only from the extaernal load balancer and bastion instance
+# security group for nginx reverse proxy, to allow access only from the external load balancer and bastion instance
 
 resource "aws_security_group_rule" "inbound-nginx-http" {
   type                     = "ingress"
